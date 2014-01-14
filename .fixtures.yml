@@ -1,0 +1,5 @@
+fixtures:
+  symlinks:
+    'mco_agents': "#{source_dir}"
+    'pe_mcollective': '/opt/puppet/share/puppet/modules/pe_mcollective'
+    'stdlib': '/opt/puppet/share/puppet/modules/stdlib'
