@@ -37,10 +37,6 @@
 #
 class mco_agents {
 
-  if !defined(Class['pe_mcollective::server']) {
-    include pe_mcollective::server
-  }
-
   $base_dir = '/opt/puppet/libexec/mcollective/mcollective/agent'
 
   File {
