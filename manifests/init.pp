@@ -37,7 +37,11 @@
 #
 class mco_agents {
 
-  $base_dir = '/opt/puppet/libexec/mcollective/mcollective/agent'
+  if $aio_agent_version {
+    $base_dir = '/opt/puppetlabs/mcollective/plugins/imcollective/agent'
+  }  else
+    $base_dir = '/opt/puppet/libexec/mcollective/mcollective/agent'
+  }
 
   File {
     owner  => 'root',
