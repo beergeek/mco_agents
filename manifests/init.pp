@@ -39,15 +39,17 @@ class mco_agents {
 
   if $aio_agent_version {
     $base_dir = '/opt/puppetlabs/mcollective/plugins/mcollective/agent'
+    $svc = 'mcollective'
   }  else
     $base_dir = '/opt/puppet/libexec/mcollective/mcollective/agent'
+    $svc = 'pe-mcollective'
   }
 
   File {
     owner  => 'root',
     group  => 'root',
     mode   => '0644',
-    notify => Service['pe-mcollective'],
+    notify => Service[$svc],
   }
 
   file {"${base_dir}/disk.ddl":
