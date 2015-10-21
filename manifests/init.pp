@@ -40,7 +40,7 @@ class mco_agents {
   if $aio_agent_version {
     $base_dir = '/opt/puppetlabs/mcollective/plugins/mcollective/agent'
     $svc = 'mcollective'
-  }  else
+  }  else {
     $base_dir = '/opt/puppet/libexec/mcollective/mcollective/agent'
     $svc = 'pe-mcollective'
   }
